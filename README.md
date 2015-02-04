@@ -23,3 +23,24 @@ If you want to override it dynamicaly, you can use volume for it.
 
 `docker run -d -v /path/to/fluentdconfdir:/etc/fluentd shimizukawa/td-agent`
 
+
+# settings
+
+PATH
+
+- `/app/bin/start`: fluentd bootstrapping bash script
+- `/app/config/fluentd.conf.erb`: template for /etc/fluentd/fluentd.conf
+- `/etc/fluentd/fluentd.conf`: fluentd config file that will be genrated by /app/bin/start
+- `/var/log/fluentd/`: fluentd log directory
+
+ENVIRONMENT
+
+- `ES_HOST`: elasticsearch host
+- `ES_PORT`: elasticsearch port
+- `ELASTICSEARCH_PORT_9200_TCP_ADDR`: will be assinged to `ES_HOST` if `ES_HOST` is not provided.
+- `ELASTICSEARCH_PORT_9200_TCP_PORT`: will be assigned to `ES_PORT` if `ES_PORT` is not provided.
+
+fluentd.conf.erb
+
+- see: [fluentd.conf.erb](https://github.com/shimizukawa/docker-fluentd/blob/master/config/fluentd.conf.erb)
+
