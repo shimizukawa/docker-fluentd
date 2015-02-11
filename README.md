@@ -21,7 +21,7 @@ If you want to override it dynamicaly, you can use volume for it.
 
 # Simple usage
 
-`docker run -d -v /path/to/fluentdconfdir:/etc/fluentd shimizukawa/td-agent`
+`docker run -d -v /path/to/fluentdconfdir:/etc/fluentd shimizukawa/fluentd`
 
 
 # settings
